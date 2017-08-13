@@ -497,10 +497,10 @@
 			}
 		},
 		{
-			"file": "yarn.lock",
+			"file": "test/index.js",
 			"settings":
 			{
-				"buffer_size": 40831,
+				"buffer_size": 218,
 				"line_ending": "Windows"
 			}
 		}
@@ -558,7 +558,8 @@
 	},
 	"expanded_folders":
 	[
-		"/C/dev/twiz-libraries/time"
+		"/C/dev/twiz-libraries/time",
+		"/C/dev/twiz-libraries/time/test"
 	],
 	"file_history":
 	[
@@ -855,24 +856,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "yarn.lock",
+					"file": "test/index.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 40831,
+						"buffer_size": 218,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								104,
+								104
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -949,7 +950,7 @@
 		[
 			[
 				"",
-				"C:\\dev\\twiz-libraries\\id\\twiz-id.sublime-project"
+				"C:\\dev\\twiz-libraries\\geo\\twiz-geo.sublime-project"
 			]
 		],
 		"width": 475.0

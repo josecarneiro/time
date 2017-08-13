@@ -4,7 +4,10 @@
 		{
 			"file_exclude_patterns":
 			[
-				"yarn.lock"
+				"yarn.lock",
+				".gitignore",
+				".travis.yml",
+				"README.md"
 			],
 			"folder_exclude_patterns":
 			[
