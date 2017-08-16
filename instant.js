@@ -3,34 +3,34 @@ const util = require('./util');
 const version = require('./package').version;
 
 module.exports = class Instant {
-  constructor () {
+  constructor (...args) {
     this.version = version;
     this.name = 'Instant';
     this._date = {};
     // IF NO ARGUMENTS GIVEN,
     // INITIATE TIME OBJECT WITH PRESENT MOMENT
     /* eslint brace-style: 0 */
-    if (!arguments.length) {
+    if (!args.length) {
       let now = new Date(Date.now());
       this.date = this.convert(now);
     }
     // IF NO ARGUMENT IS NUMBER,
     // ASSUME IT'S THE NUMBER OF MILISECONDS SINCE THE EPOCH
-    else if (arguments.length === 1 && typeof arguments[0] === 'number') {
-      this.date = this.convert(new Date(arguments[0]));
+    else if (args.length === 1 && typeof args[0] === 'number') {
+      this.date = this.convert(new Date(args[0]));
     }
     // IF ARGUMENT IS A DATE OBJECT,
     // CONVERT THAT DATE OBJECT
-    else if (arguments.length === 1 && arguments[0] instanceof Date) {
-      this.date = this.convert(arguments[0]);
+    else if (args.length === 1 && args[0] instanceof Date) {
+      this.date = this.convert(args[0]);
     }
     // IF ARGUMENT IS STRING
-    else if (arguments.length === 1 && typeof arguments[0] === 'string') {
-      this.date = this.convert(new Date(Date.parse(arguments[0])));
+    else if (args.length === 1 && typeof args[0] === 'string') {
+      this.date = this.convert(new Date(Date.parse(args[0])));
     }
     // IF ARGUMENT IS OBJECT
-    else if (arguments.length === 1 && typeof arguments[0] === 'object') {
-      this.date = util.destructure(arguments[0]);
+    else if (args.length === 1 && typeof args[0] === 'object') {
+      this.date = util.destructure(args[0]);
     }
     // IF NONE OF THE ABOVE CONDITIONS IS MET,
     // THROW ERROR
@@ -76,7 +76,7 @@ module.exports = class Instant {
       year: date.getFullYear(),
       month: date.getMonth() + 1,
       day: date.getDate(),
-      hours: date.getHours(),
+      hours: date.getUTCHours(),
       minutes: date.getMinutes(),
       seconds: date.getSeconds(),
       milliseconds: date.getMilliseconds()
