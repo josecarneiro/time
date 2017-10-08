@@ -8,7 +8,8 @@
 				".gitignore",
 				".travis.yml",
 				"README.md",
-				"test/mocha.opts"
+				"test/mocha.opts",
+				"package-lock.json"
 			],
 			"folder_exclude_patterns":
 			[

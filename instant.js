@@ -11,7 +11,6 @@ module.exports = class Instant {
     this._date = {};
     // IF NO ARGUMENTS GIVEN,
     // INITIATE TIME OBJECT WITH PRESENT MOMENT
-    /* eslint brace-style: 0 */
     if (!args.length) {
       let now = new Date(Date.now());
       this.date = this.convert(now);
