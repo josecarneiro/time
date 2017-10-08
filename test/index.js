@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Utils Tests', () => {
   /* BEFORE AND AFTER TEST HOOKS */
   before(done => {

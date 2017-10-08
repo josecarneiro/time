@@ -5,7 +5,7 @@
 			"file_exclude_patterns":
 			[
 				"yarn.lock",
-				// ".gitignore",
+				".gitignore",
 				".travis.yml",
 				"README.md",
 				"test/mocha.opts"

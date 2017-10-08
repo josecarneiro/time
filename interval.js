@@ -1,22 +1,24 @@
+'use strict';
+
 const Instant = require('./instant');
 
 module.exports = class Interval {
-  constructor () {
+  constructor (...args) {
     this._interval = {};
     // CAN TAKE EITHER
     //  - A START AND AN END OBJECT, WITH AN OPTIONAL OPTIONS OBJECT
     //  - AN ARRAY OF TWO OBJECTS, WITH OPTIONAL OPTIONS
-    if (arguments.length === 1 && arguments[0] instanceof Array) {
-      this.interval = arguments[0];
-    } else if (arguments.length === 1 && (arguments[0].hasOwnProperty('start') || arguments[0].hasOwnProperty('end'))) {
-      this.interval = [ arguments[0].start, arguments[0].end ];
-    } else if (arguments.length === 2 && arguments[0] instanceof Array) {
-      this.options = arguments[1];
-      this.interval = arguments[0];
-    } else if (arguments.length === 2) {
-      this.interval = [ arguments[0], arguments[1] ];
+    if (args.length === 1 && args[0] instanceof Array) {
+      this.interval = args[0];
+    } else if (args.length === 1 && (args[0].hasOwnProperty('start') || args[0].hasOwnProperty('end'))) {
+      this.interval = [ args[0].start, args[0].end ];
+    } else if (args.length === 2 && args[0] instanceof Array) {
+      this.options = args[1];
+      this.interval = args[0];
+    } else if (args.length === 2) {
+      this.interval = [ args[0], args[1] ];
     } else {
-      throw new Error('Unexpected arguments.');
+      throw new Error('Unexpected args.');
     }
   }
 
