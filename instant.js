@@ -2,12 +2,11 @@
 
 const util = require('./util');
 
-const version = require('./package').version;
+const { version } = require('./package');
 
 module.exports = class Instant {
   constructor (...args) {
-    this.version = version;
-    this.name = 'Instant';
+    this._version = version;
     this._date = {};
     // IF NO ARGUMENTS GIVEN,
     // INITIATE TIME OBJECT WITH PRESENT MOMENT

@@ -15,6 +15,18 @@ Represents the interval between two points in time.
 
 ---
 
+### Duration Class
+
+Represents a length of time. Eg. 1 month, 1 day.
+
+---
+
+### Period Class
+
+Something that happens in a repetitive pattern. Like New year's day.
+
+---
+
 ## To do:
 
 * Implement Duration or Period Class

@@ -7,7 +7,7 @@
 				"yarn.lock",
 				".gitignore",
 				".travis.yml",
-				"README.md",
+				// "README.md",
 				"test/mocha.opts",
 				"package-lock.json"
 			],
