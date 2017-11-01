@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  Instant: require('./Instant'),
+  Instant: require('./instant'),
   Interval: undefined,
   Duration: undefined,
   Period: undefined
